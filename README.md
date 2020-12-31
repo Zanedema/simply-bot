@@ -58,16 +58,16 @@ Tada! Below the `Scopes` window, a new window will appear, named `Bot Permission
 
 14. Run the bot using Python.
 
-15. Run the command `!s setup` to make the bot role. Assign it to people who you would like to have control over the bot's functions.
+15. Run the command `~s setup` to make the bot role. Assign it to people who you would like to have control over the bot's functions.
 
 16. Regret.
 ---
 # Commands:
-- !s setup
+- ~s setup
 Creates the `Simply User` Role. Feel free to change the color, permissions, and position, however the name must stay the same (If you *really* want to, modify the source.)
-- !s new
+- ~s new
 Prompts user in PMs to make a new trigger/response pair. The triggers are stripped of punctuation, and are case insensitive when searched for.
-- !s delete
-Deletes a trigger/response pair based upon the trigger. These are also stripped of punctuation.
+- ~s delete
+Deletes a trigger/response pair based upon the trigger. These are also stripped of punctuation, case insensitive.
 
 
