@@ -34,7 +34,7 @@ def delJson(user, trigger):
 
 
 def writeLog(author, message, response):
-    log = open("log.txt", "a+", encoding='utf8')
+    log = open("log.txt", "a", encoding='utf8')
     entry = ("User " + str(author) + " entered the trigger '" + message + "' with the response '" + response + "'\n")
     log.write(entry)
     print(entry)
@@ -42,7 +42,7 @@ def writeLog(author, message, response):
 
 
 def delLog(author, message):
-    log = open("log.txt", "a+", encoding='utf8')
+    log = open("log.txt", "a", encoding='utf8')
     entry = ("User " + str(author) + " deleted the entry '" + message + "'\n")
     log.write(entry)
     print(entry)
