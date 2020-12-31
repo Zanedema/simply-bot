@@ -8,7 +8,7 @@ import re
 import json
 from dotenv import load_dotenv
 
-bot = commands.Bot(command_prefix="!s ")
+bot = commands.Bot(command_prefix="~s ")
 
 
 def writeJSON(trigger, response):
