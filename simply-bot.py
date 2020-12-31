@@ -106,7 +106,7 @@ async def new_error(ctx, error):
                          "trigger.")
 async def delete(ctx):
     await ctx.message.delete()
-    await ctx.author.send("What trigger would you like to delete? 🗑 `cancel` to cancel.")
+    await ctx.author.send("What trigger would you like to delete? 🗑 (`cancel` to cancel.)")
     unconTargetTrig = await bot.wait_for('message', check=check(ctx.author))
     targetTrig = unconTargetTrig.content
 
@@ -120,10 +120,10 @@ async def delete(ctx):
     with open('responses.json') as file:
         searchDict = json.load(file)
         for key in searchDict:
-            if key == targetTrig:
+            if key.lower() == targetTrig.lower():
                 await ctx.author.send("Sure thing.")
                 found = True
-                delJson(ctx.author, targetTrig)
+                delJson(ctx.author, key)
     if not found:
         await ctx.author.send("I can't find the entry you're looking for 🤔. Try again, or ask the host for help.")
 
