@@ -138,7 +138,7 @@ async def delete_error(ctx, error):
 
 @bot.event
 async def on_message(message):
-    if message.author != bot.user and not isinstance(message.channel, discord.channel.DMChannel):
+    if message.author != bot.user and not isinstance(message.channel, discord.channel.DMChannel) and not message.author.bot:
         with open('responses.json') as file:
             searchDict = json.load(file)
             for key in searchDict:
