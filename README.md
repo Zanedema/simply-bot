@@ -68,6 +68,6 @@ Creates the `Simply User` Role. Feel free to change the color, permissions, and 
 - !s new
 Prompts user in PMs to make a new trigger/response pair. The triggers are stripped of punctuation, and are case insensitive when searched for.
 - !s delete
-Deletes a trigger/response pair based upon the trigger. These are also stripped of punctuation.
+Deletes a trigger/response pair based upon the trigger. These are also stripped of punctuation, case insensitive.
 
 
