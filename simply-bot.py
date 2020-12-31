@@ -142,7 +142,7 @@ async def on_message(message):
         with open('responses.json') as file:
             searchDict = json.load(file)
             for key in searchDict:
-                if re.search(r"(\s|\b|^)" + re.escape(key) + r"(\s|\b|^)", message.content,
+                if re.search(r"\b" + re.escape(key) + r"(\b|$)", message.content,
                              re.MULTILINE | re.IGNORECASE):
                     await message.channel.send(searchDict[key])
     await bot.process_commands(message)
